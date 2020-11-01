@@ -6,8 +6,8 @@ class VigenereCipheringMachine {
   }
 
   encrypt(phrase, key) {
-    if (phrase === undefined || key === undefined) {
-      throw new CustomError('Not implemented');
+    if (!phrase || !key ) {
+      throw new Error('Not implemented');
     }
     let result = [];
     phrase = phrase.toUpperCase();
@@ -32,8 +32,8 @@ class VigenereCipheringMachine {
   }
   
   decrypt(phrase, key) {
-    if (phrase === undefined || key === undefined) {
-      throw new CustomError('Not implemented');
+    if (!phrase || !key ) {
+      throw new Error('Not implemented');
     }
     let result = [];
     phrase = phrase.toUpperCase();
